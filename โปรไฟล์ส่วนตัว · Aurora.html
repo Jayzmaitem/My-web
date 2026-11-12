@@ -1,0 +1,91 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>โปรไฟล์ส่วนตัว · Aurora</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet"><style>
+:root{--h:258;--bg:hsl(var(--h) 40% 97%);--fg:hsl(var(--h) 30% 12%);--mut:hsl(var(--h) 12% 40%);--card:#fff;--line:hsl(var(--h) 30% 90%);--ac:hsl(var(--h) 85% 56%);--ac2:hsl(calc(var(--h) + 55) 90% 60%);--acs:hsl(var(--h) 90% 95%);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);scroll-padding-top:env(safe-area-inset-top,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:hsl(var(--h) 28% 8%);--fg:hsl(var(--h) 25% 94%);--mut:hsl(var(--h) 12% 66%);--card:hsl(var(--h) 24% 13%);--line:hsl(var(--h) 22% 22%);--acs:hsl(var(--h) 45% 20%);--ac:hsl(var(--h) 90% 66%);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:hsl(var(--h) 28% 8%);--fg:hsl(var(--h) 25% 94%);--mut:hsl(var(--h) 12% 66%);--card:hsl(var(--h) 24% 13%);--line:hsl(var(--h) 22% 22%);--acs:hsl(var(--h) 45% 20%);--ac:hsl(var(--h) 90% 66%);color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}
+body{font-family:'Prompt','Noto Sans Thai',system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6}
+h1,h2,p{overflow-wrap:anywhere}[data-ml]{white-space:pre-line}[data-k]{caret-color:var(--ac)}
+[data-img]{position:relative;display:grid;place-items:center;background:linear-gradient(135deg,var(--ac),var(--ac2));background-size:cover;background-position:center}
+[data-img]:not(.has)::before{content:attr(data-ph);font-size:48px}
+.l{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}.l li{display:flex;align-items:center}
+.chips{flex-direction:row;flex-wrap:wrap}.chips li{background:var(--acs);border:1px solid var(--line);padding:6px 10px 6px 14px;border-radius:99px}
+.tl li{border-left:2px solid var(--ac);padding-left:14px}
+.ed{min-width:1em}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.gi,.add{aspect-ratio:1;border-radius:16px}.gi{background-size:cover;background-position:center;position:relative}
+.add{display:none;border:2px dashed var(--ac);background:var(--acs);color:var(--ac);cursor:pointer;font:inherit;place-items:center}
+.emp{color:var(--mut);margin:0;grid-column:1/-1}
+.rm,.addl{display:none}
+.rm{border:0;background:var(--ac);color:#fff;border-radius:50%;width:20px;height:20px;line-height:20px;cursor:pointer;font-size:14px;padding:0;margin-left:6px}
+.gi .rm{position:absolute;top:6px;right:6px;margin:0}
+.addl{border:1px dashed var(--ac);background:none;color:var(--ac);border-radius:99px;padding:4px 14px;cursor:pointer;margin-top:10px;font:inherit}
+body.edit .rm{display:inline-block}body.edit .addl{display:inline-block}body.edit .add{display:grid}body.edit .emp{display:none}
+body.edit [data-k],body.edit .ed{outline:1.5px dashed var(--ac);outline-offset:3px;border-radius:6px;cursor:text}
+body.edit [data-img]{cursor:pointer;outline:2px dashed var(--ac);outline-offset:3px}
+body.edit [data-img]::after{content:"📷 เปลี่ยนรูป";position:absolute;bottom:6px;left:50%;transform:translateX(-50%);font-size:12px;background:rgba(0,0,0,.65);color:#fff;padding:2px 10px;border-radius:99px;white-space:nowrap}
+#tb{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:50;display:flex;flex-direction:column;align-items:flex-end;gap:10px;font:500 14px 'Prompt',system-ui,sans-serif}
+.fab{border:0;border-radius:99px;padding:11px 18px;background:var(--ac);color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.28);cursor:pointer;font:inherit}
+.fab.g{background:var(--card);color:var(--fg);border:1px solid var(--line)}
+#pn{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:18px;padding:14px;width:250px;box-shadow:0 10px 30px rgba(0,0,0,.28)}#pn[hidden]{display:none}
+.sw{width:28px;height:28px;border-radius:50%;border:2px solid var(--card);outline:1px solid var(--line);margin:5px 3px;cursor:pointer;padding:0}
+#pn input{width:100%;accent-color:var(--ac)}
+.row{display:flex;gap:6px;margin-top:8px}.row button{flex:1;border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:10px;padding:7px 4px;cursor:pointer;font:inherit;font-size:12px}
+#ts{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(80px + env(safe-area-inset-bottom,0px));background:#111;color:#fff;padding:8px 16px;border-radius:99px;display:none;z-index:60;font-size:14px;max-width:90vw;text-align:center}
+
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(42vmax 42vmax at 12% 8%,var(--ac),transparent 60%),radial-gradient(38vmax 38vmax at 92% 30%,var(--ac2),transparent 60%);opacity:.38;filter:blur(40px)}
+.w{max-width:1000px;margin:auto;padding:48px 18px 120px}
+.hero{text-align:center;padding:24px 0 40px}
+.av{width:150px;height:150px;border-radius:50%;margin:0 auto 18px;border:4px solid var(--card);box-shadow:0 0 0 4px var(--ac),0 20px 50px -10px var(--ac)}
+h1{font-size:clamp(34px,8vw,64px);line-height:1.15;margin:.1em 0;background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag,.role{color:var(--mut);margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+.c{background:color-mix(in srgb,var(--card) 62%,transparent);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:26px;padding:24px}
+.s-about,.s-gal{grid-column:1/-1}h2{font-size:18px;margin:0 0 14px}
+footer{text-align:center;color:var(--mut);margin-top:34px}
+</style></head><body data-id="prof-aurora"><main class="w"><header class="hero"><div class="av" data-img="avatar" data-ph="🙂"></div><p class="tag" data-k="tag">สวัสดี ฉันคือ</p><h1 data-k="name">นภัส วงศ์ดี</h1><p class="role" data-k="role">นักออกแบบ · คนรักกาแฟ · นักเดินทาง</p></header><div class="grid">
+<section class="c s-about"><h2 data-k="h1">👤 เกี่ยวกับฉัน</h2><p data-ml data-k="bio">เป็นคนชอบเรียนรู้สิ่งใหม่ ๆ รักการเดินทาง และหลงใหลในกาแฟดี ๆ สักแก้ว
+ชอบสร้างสรรค์งานที่ดูดีและใช้งานง่าย พร้อมเสมอสำหรับมิตรภาพและเรื่องราวดี ๆ</p></section>
+<section class="c s-info"><h2 data-k="h2">📌 ข้อมูลพื้นฐาน</h2><ul class="l" data-list="info"><li>🎂 วันเกิด: 1 มกราคม</li><li>🩸 หมู่เลือด: O</li><li>🗣️ ภาษา: ไทย, English</li></ul><button class="addl" data-add="info">＋ เพิ่ม</button></section>
+<section class="c s-hob"><h2 data-k="h3">🎯 งานอดิเรก</h2><ul class="l chips" data-list="hob"><li>📷 ถ่ายภาพ</li><li>🎧 ฟังเพลง</li><li>🏃 วิ่งตอนเช้า</li><li>☕ ชงกาแฟ</li><li>✈️ เที่ยวทะเล</li></ul><button class="addl" data-add="hob">＋ เพิ่ม</button></section>
+<section class="c s-fav"><h2 data-k="h4">💖 ของที่ชอบ</h2><ul class="l chips" data-list="fav"><li>🍜 ก๋วยเตี๋ยวเรือ</li><li>🎬 หนังไซไฟ</li><li>📚 หนังสือดี ๆ</li><li>🐱 แมว</li><li>🌧️ วันฝนตก</li></ul><button class="addl" data-add="fav">＋ เพิ่ม</button></section>
+<section class="c s-his"><h2 data-k="h5">📖 ประวัติส่วนตัว</h2><ul class="l tl" data-list="his"><li>2547 — เกิดและเติบโตในครอบครัวอบอุ่น</li><li>2562 — เริ่มเรียนในสาขาที่ใช่</li><li>2566 — จบการศึกษา เริ่มทำงานแรก</li><li>2569 — ลุยโปรเจกต์ใหม่ ๆ อย่างเต็มที่</li></ul><button class="addl" data-add="his">＋ เพิ่ม</button></section>
+<section class="c s-con"><h2 data-k="h7">📬 ติดต่อ</h2><ul class="l" data-list="con"><li>📧 hello@example.com</li><li>📱 IG: @yourname</li><li>💬 LINE: yourname</li></ul><button class="addl" data-add="con">＋ เพิ่ม</button></section>
+<section class="c s-gal"><h2 data-k="h6">🖼️ แกลเลอรี่</h2><div class="gal" data-gallery="gal"></div></section>
+</div><footer data-k="foot">© 2026 · ทำด้วยใจ ♥</footer></main><script>
+(()=>{
+const ID=document.body.dataset.id,R=document.documentElement,B=document.body,$=(s,r=document)=>[...r.querySelectorAll(s)],g=i=>document.getElementById(i);
+let S={t:{},i:{},l:{},g:{},h:null,m:'auto'};
+try{Object.assign(S,JSON.parse(localStorage.getItem(ID)||'{}'))}catch(e){}
+const dh=+getComputedStyle(R).getPropertyValue('--h');
+B.insertAdjacentHTML('beforeend',`<input type=file id=fi accept="image/*" hidden><div id=ts></div><div id=tb><div id=pn hidden><b>🎨 เลือกสีเว็บไซต์</b><div>${[258,330,8,32,150,190,215].map(h=>`<button class=sw data-h=${h} style="background:hsl(${h} 85% 56%)" aria-label="สี"></button>`).join('')}</div><input id=hs type=range min=0 max=360 aria-label="ปรับเฉดสี"><div class=row><button data-m=light>☀️ สว่าง</button><button data-m=dark>🌙 มืด</button><button data-m=auto>🖥️ อัตโนมัติ</button></div><div class=row><button id=rst>↺ รีเซ็ตทั้งหมด</button></div></div><button class="fab g" id=bC>🎨 เปลี่ยนสี</button><button class=fab id=bE>✏️ แก้ไข</button></div>`);
+let tt;const toast=m=>{const e=g('ts');e.textContent=m;e.style.display='block';clearTimeout(tt);tt=setTimeout(()=>e.style.display='none',2400)};
+const save=()=>{try{localStorage.setItem(ID,JSON.stringify(S))}catch(e){toast('พื้นที่จัดเก็บเต็ม ลองลดจำนวนรูปลง')}};
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ce=(r=document)=>$('[data-k],.ed',r).forEach(e=>e.contentEditable=B.classList.contains('edit'));
+const ap=()=>{const h=S.h==null?dh:S.h;R.style.setProperty('--h',h);g('hs').value=h;if(S.m==='auto')R.removeAttribute('data-theme');else R.dataset.theme=S.m};
+const si=e=>{const s=S.i[e.dataset.img];e.style.backgroundImage=s?`url(${s})`:'';e.classList.toggle('has',!!s)};
+const L={};
+const rl=u=>{const k=u.dataset.list;u.innerHTML=L[k].map((x,i)=>`<li><span class="ed" data-i="${i}">${esc(x)}</span><button class="rm" data-rm="${i}" aria-label="ลบ">×</button></li>`).join('');ce(u)};
+const rg=c=>{const a=S.g[c.dataset.gallery]||[];c.innerHTML=a.map((s,i)=>`<div class="gi" style="background-image:url(${s})"><button class="rm" data-rg="${i}" aria-label="ลบ">×</button></div>`).join('')+'<button class="add">＋ เพิ่มรูป</button>'+(a.length?'':'<p class="emp">ยังไม่มีรูป กด ✏️ แก้ไข แล้วเพิ่มรูปได้เลย</p>')};
+const rs=(f,max,cb)=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,max/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);cb(c.toDataURL('image/jpeg',.82))};im.src=r.result};r.readAsDataURL(f)};
+let PM=700,PC;const pick=(m,mx,f)=>{const fi=g('fi');fi.multiple=m;PM=mx;PC=f;fi.value='';fi.click()};
+g('fi').onchange=e=>[...e.target.files].forEach(f=>rs(f,PM,PC));
+$('[data-k]').forEach(e=>{const v=S.t[e.dataset.k];if(v!=null)e.textContent=v});
+$('[data-list]').forEach(u=>{const k=u.dataset.list;L[k]=S.l[k]||$('li',u).map(l=>l.textContent.trim());rl(u)});
+$('[data-gallery]').forEach(rg);$('[data-img]').forEach(si);ap();
+document.addEventListener('input',e=>{const t=e.target;if(t.dataset&&t.dataset.k){S.t[t.dataset.k]=t.innerText;save()}else if(t.classList&&t.classList.contains('ed')){const k=t.closest('[data-list]').dataset.list;L[k][+t.dataset.i]=t.innerText;S.l[k]=L[k];save()}});
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.isContentEditable&&e.target.dataset.ml==null){e.preventDefault();e.target.blur()}});
+document.addEventListener('paste',e=>{if(e.target.isContentEditable){e.preventDefault();document.execCommand('insertText',false,(e.clipboardData||window.clipboardData).getData('text/plain'))}});
+document.addEventListener('click',e=>{const t=e.target;let x;
+if(t.dataset.h){S.h=+t.dataset.h;ap();save();return}
+if(t.dataset.m){S.m=t.dataset.m;ap();save();return}
+if(x=t.closest('.rm')){const u=x.closest('[data-list]'),c=x.closest('[data-gallery]');if(u){const k=u.dataset.list;L[k].splice(+x.dataset.rm,1);S.l[k]=L[k];rl(u)}else if(c){S.g[c.dataset.gallery].splice(+x.dataset.rg,1);rg(c)}save();return}
+if(x=t.closest('.addl')){const k=x.dataset.add,u=$(`[data-list="${k}"]`)[0];L[k].push('✨ รายการใหม่');S.l[k]=L[k];rl(u);save();const s=$('.ed',u).pop();s.focus();return}
+if(x=t.closest('.add')){const c=x.parentNode,k=c.dataset.gallery;pick(true,900,d=>{(S.g[k]=S.g[k]||[]).push(d);rg(c);save()});return}
+if(B.classList.contains('edit')&&(x=t.closest('[data-img]'))){pick(false,700,d=>{S.i[x.dataset.img]=d;si(x);save()})}});
+g('hs').oninput=e=>{S.h=+e.target.value;ap();save()};
+g('bC').onclick=()=>{g('pn').hidden=!g('pn').hidden};
+g('bE').onclick=()=>{const on=B.classList.toggle('edit');ce();g('bE').textContent=on?'✓ เสร็จสิ้น':'✏️ แก้ไข';toast(on?'โหมดแก้ไข: แตะข้อความหรือรูปเพื่อแก้ไขได้เลย':'บันทึกเรียบร้อย ✓')};
+let rc=0;g('rst').onclick=e=>{if(!rc){rc=1;e.target.textContent='กดอีกครั้งเพื่อยืนยัน';setTimeout(()=>{rc=0;e.target.textContent='↺ รีเซ็ตทั้งหมด'},3000)}else{try{localStorage.removeItem(ID)}catch(_){}location.reload()}};
+})();
+</script></body></html>
